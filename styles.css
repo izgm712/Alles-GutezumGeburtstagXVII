@@ -1,0 +1,761 @@
+
+body {
+    margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+                  /* hilangkan scroll */
+        /* cegah bounce di HP */
+      position: fixed;             /* kunci posisi */
+      top: 0;
+      left: 0;
+      background-color: rgb(18, 20, 27)
+}
+/*segala jenis blur */
+#fig.blur{
+  filter: blur(5px);
+}
+#fig{
+  transition: filter 0.7s ease-in-out ;
+
+}
+#cake.blur {
+  filter: blur(5px);
+}
+#cake{
+  transition: filter 0.6s ease-in-out;
+  z-index: 5;
+  left: 10px;
+}
+#cakee{
+  top: 1px;
+  scale: calc();
+}
+
+
+#cake {
+  display: block;
+  position: absolute;   /* supaya bisa ditempatkan bebas */
+  left: 50%;            /* tetap di tengah horizontal */
+  transform: translateX(-50%); /* koreksi agar benar-benar center */
+  top: 23%;             /* 5/6 dari tinggi halaman (≈ 83%) */
+  width: 200px;
+  height: 500px;
+  
+}
+
+.candle {
+  background: #ee0c0c;
+  border-radius: 10px;
+  position: absolute;
+  top: 610px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+  opacity: 0;
+}
+.candle:after,
+.candle:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+.candle:after {
+  top: 25%;
+  left: 0;
+}
+.candle:before {
+  top: 45%;
+  left: 0;
+}
+
+.fire {
+   border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+}
+.fire:nth-child(1) {
+  animation: fire 2s 6.5s infinite;
+}
+.fire:nth-child(2) {
+  animation: fire 1.5s 6.5s infinite;
+}
+.fire:nth-child(3) {
+  animation: fire 1s 6.5s infinite;
+}
+.fire:nth-child(4) {
+  animation: fire 0.5s 6.5s infinite;
+}
+.fire:nth-child(5) {
+  animation: fire 0.2s 6.5s infinite;
+}
+
+@keyframes fire {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(232, 209, 248, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  } }
+.text {
+  color: #a15d49;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style:italic;
+  text-align: center;
+  transition: filter 0.6s ease; /* transisi halus blur */
+  z-index: 99;
+  position: relative;
+  opacity: 0;
+  
+  top: -29%;
+
+}  
+.text h1 {
+    font-size: 1.4em;
+    
+  }
+.gifff {
+  width: 120px;
+  height: 120px;
+  background-image: url(celebrate.gif);
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  
+  scale: calc(1.3);
+  top: -190px;
+}
+.hbd{
+  position: absolute;
+  top: -29%;          /* jarak dari atas, bisa disesuaikan */
+  left: 50%;         /* posisikan di tengah horizontal */
+  transform: translateX(-50%); /* benar-benar center secara horizontal */
+  font-size: 2.5rem; /* ukuran teks */
+  font-weight: bold;
+  color: #ff4081;    /* warna cerah */
+  position: absolute;
+  
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff4081;
+  opacity: 0; /* awalnya tidak terlihat */
+  transition: opacity 5s ease-in; /* efek muncul perlahan */
+  scale: ;
+}
+
+.crem {
+  opacity: 0;
+  transition: opacity 3s ease-in;
+}
+.star{
+
+      width: 36px;
+      height: 36px;
+      background-image: url("star1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: -20px; /* mulai dari atas layar */
+      animation: fall linear forwards;
+      scale: ;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 150, 0.9));
+      z-index: 99;
+       
+ 
+  
+}
+
+    @keyframes fall {
+      from { transform: translateY(0); opacity: 1; }
+      to   { transform: translateY(580PX); opacity: 0.1; }
+    }
+
+.a1{
+ border-radius: 10px;
+  position: absolute;
+  top: 540px;
+  left: 50%;
+  margin-left: -50.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-in-out forwards;
+  z-index: -1;
+} 
+.a2{
+ border-radius: 10px;
+  position: absolute;
+  top: 540px;
+  left: 50%;
+  margin-left: 15.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-in-out forwards;
+  z-index: -1;
+  opacity: 0;
+} 
+
+.lilin1 {
+  background-image: url(angka1.png);
+  border-radius: 10px;
+  position: absolute;
+  top: 610px;
+  left: 50%;
+  margin-left: -60.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+  opacity: 0;
+}
+.lilin1:after,
+.lilin1:before {
+  background-image: url(angka1.png);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+.lilin1:after {
+  top: 25%;
+  left: 0;
+}
+.lilin1:before {
+  top: 45%;
+  left: 0;
+}
+
+.api {
+   border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: 13.7px;
+  width: 6.66666667px;
+  height: 18px;
+}
+.api:nth-child(1) {
+  animation: fire 2s 6.5s infinite;
+}
+.api:nth-child(2) {
+  animation: fire 1.5s 6.5s infinite;
+}
+.api:nth-child(3) {
+  animation: fire 1s 6.5s infinite;
+}
+.api:nth-child(4) {
+  animation: fire 0.5s 6.5s infinite;
+}
+.api:nth-child(5) {
+  animation: fire 0.2s 6.5s infinite;
+}
+
+@keyframes api{
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(232, 209, 248, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  } }
+
+  .lilin8 {
+  background-image: url(angka1.png);
+  border-radius: 10px;
+  position: absolute;
+  top: 610px;
+  left: 50%;
+  margin-left: 20.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+  opacity: 0;
+}
+.lilin8:after,
+.lilin8:before {
+  background-image: url(angka1.png);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+.lilin8:after {
+  top: 25%;
+  left: 0;
+}
+.lilin8:before {
+  top: 70%;
+  left: 0;
+}
+
+.apii {
+   border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: 13.3px;
+  width: 6.66666667px;
+  height: 18px;
+}
+.apii:nth-child(1) {
+  animation: fire 2s 6.5s infinite;
+}
+.apii:nth-child(2) {
+  animation: fire 1.5s 6.5s infinite;
+}
+.apii:nth-child(3) {
+  animation: fire 1s 6.5s infinite;
+}
+.apii:nth-child(4) {
+  animation: fire 0.5s 6.5s infinite;
+}
+.apii:nth-child(5) {
+  animation: fire 0.2s 6.5s infinite;
+}
+
+@keyframes apii{
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(232, 209, 248, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  } }
+
+  /* pesan hebat kamu bud */
+
+.surat {
+   display: block;
+  position: absolute;   /* supaya bisa ditempatkan bebas */
+  left: 50%;            /* tetap di tengah horizontal */
+  transform: translateX(-50%); /* koreksi agar benar-benar center */
+  top: 43%;             /* 5/6 dari tinggi halaman (≈ 83%) */
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 5s ease-in;
+}
+
+.envelope {
+  width: 150px;
+  height: 100px;
+  background: #fff;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  perspective: 1000px;
+  z-index: 20;
+  transition: transform 0.4s ease; /* transisi untuk efek turun */
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #f0f0f0;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 0.8s ease;
+  z-index: 5;
+}
+
+.dalam {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.luar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #261b1b40;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  z-index: 4;
+}
+
+.envelope.open .flap {
+  transform: rotateX(-180deg);
+}
+
+/* efek amplop turun tipis */
+.envelope.open {
+  transform: translateY(110px);
+}
+
+.seal {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  background: #ff4d6d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,77,109,0.6);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pesan keluar dari bawah */
+.message {
+  position: absolute;
+    bottom: 20px; /* mulai tersembunyi di bawah amplop */
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 130px;
+    background: #142f8f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 4;
+    position: center ;
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  border: 5px solid pink;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  color: #b22222; /* merah hati */
+  text-align: left;
+  line-height: 1.6;
+  transition: transform 0.9s ease-in ;
+}
+
+.message:hover {
+  transform: scale(1.03);
+}
+
+.message h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ff4d6d;
+}
+
+.envelope.open  + .message  {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* naik ke atas */
+}
+@media (max-width: 400px) {
+  body{background-color:  rgb(18, 20, 27)}
+  
+ 
+  #cake {
+    width: 250px;
+    height: 550px;
+    top: 19%;
+  }
+  .message {
+    width: 300px ;
+    font-size: 0.9rem;
+    
+  }
+  .lilin1{
+    top: 565px;  
+  }
+  .lilin8{
+    top: 565px;
+  }
+  .candle{
+    top: 570px;
+  }
+  .envelope.open {
+  transform: translateY(200px);
+}
+.stiker {
+  width: 120px;
+  height: 120px;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  left: 20px;
+  z-index: 1111;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.1s ease;
+  animation-delay: 5s;
+}
+
+.stiker.show {
+  animation-delay: 20s;
+  opacity: 1;
+  transition: opacity 10s ease, transform 0.1 ease;
+  transform: translateX(0) translateY(0) scale(1.2);
+}
+#ronaldo{
+  background-image: url(ronaldo.png); 
+  width: 140px;
+  height: 140px;
+  top: 300px;
+  left: -40px;
+  
+  
+}
+#sapar{
+  background-image: url(stiker1.png); 
+  width: 100px;
+  height: 100px;
+  top: -224px;
+  left: 10px;
+  scale: calc(1.2);
+  transform: translatey(80px);
+
+}
+#dinom{
+  background-image: url(dinomelet.gif); 
+  width: 100px;
+  height: 100px;
+  top: -240px;
+  left: 60%;
+  margin-right:100px ;
+  transform: translateX(50px);
+
+}
+#melet{
+  background-image: url(melet2.png); 
+  width: 150px;
+  height: 150px;
+  top: -55Px;
+  left: 55%;
+  margin-right:100px ;
+  transform: translateX(20px);
+
+}
+#turu{
+  background-image: url(turu.png); 
+  width: 260px;
+  height: 120px;
+  top: 80px;
+  left: 60%;
+  margin-right:100px ;
+  transform: translateX(-50px);
+  justify-items: right;
+  justify-items: right;
+  align-items: right;
+  scale: calc(0.99);
+}
+#siu{
+  background-image: url(siu12.png); 
+  position: absolute;
+  width: 140px;
+  height: 150px;
+  top: 259px;
+  left: -38px;
+  margin-right:100px ;
+  transform: translateX(50px);
+
+}
+#ily {
+  position: absolute;
+  background-image: url(ILY.png);
+  top: 530px;
+  left: -0px;
+  width: 100px;
+  height: 145px;
+  scale: calc(0.9);
+  
+}
+}
+
+@media (min-width: 601px) {
+  body{
+    background-color: rgb(18, 20, 27)
+  }
+  #cake {
+    width: 300px;
+    height: 600px;
+    top: 20%;
+  }
+  .message {
+    width: 600px;
+    font-size: 1.2rem;
+  }
+  .gifff{
+    scale: calc(2.7);
+    top: -36%;
+    left: 5%;
+
+  }
+  
+.stiker {
+  width: 120px;
+  height: 120px;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  left: 20px;
+  z-index: 1111;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.1s ease;
+  animation-delay: 5s;
+}
+
+.stiker.show {
+  animation-delay: 20s;
+  opacity: 1;
+  transition: opacity 10s ease, transform 0.1 ease;
+  transform: translateX(0) translateY(0) scale(1.2);
+}
+#ronaldo{
+  background-image: url(ronaldo.png); 
+  width: 140px;
+  height: 140px;
+  top: 300px;
+  left: 20%;
+  scale: calc(1.7);
+  
+}
+#sapar{
+  background-image: url(stiker1.png); 
+  width: 200px;
+  height: 200px;
+  top: -180px;
+  left: 20%;
+  scale: calc(1,3);
+  
+  transform: translatey(30px);
+
+}
+#dinom{
+  background-image: url(dinomelet.gif); 
+  width: 200px;
+  height: 200px;
+  top: -340px;
+  left: 74%;
+  margin-right:100px ;
+  transform: translateX(-26%);
+
+}
+#melet{
+  background-image: url(melet2.png); 
+  width: 250px;
+  height: 250px;
+  top: 250Px;
+  left: 74%;
+  margin-right:100px ;
+  transform: translateX(-26%);
+  position: absolute;
+
+}
+#turu{
+  background-image: url(turu.png); 
+  width: 260px;
+  height: 120px;
+  top: 80px;
+  left: 60%;
+  margin-right:100px ;
+  transform: translateX(-50px);
+  justify-items: right;
+  justify-items: right;
+  align-items: right;
+  scale: calc(0.99);
+}
+#siu{
+  background-image: url(siu12.png); 
+  position: absolute;
+  width: 140px;
+  height: 150px;
+  top: 250px;
+  left: 20%;
+  margin-right:100px ;
+  transform: translateX(50px);
+  scale: calc(1.7);
+
+}
+}
+
+
+
+#ner {
+      width: 110px;
+      height: 110px;
+      background: lightblue;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom:100px ;
+      display: flex;
+      flex-direction: column; /* susun vertikal */
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      border-radius: 220px;
+      transition: opacity 1s ease;
+      position: absolute;
+      opacity: 0;
+    }
+    #mes {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    #countdown {
+      font-size: 32px;
+    }
