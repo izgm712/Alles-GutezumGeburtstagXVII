@@ -503,7 +503,7 @@ body {
   opacity: 1;
   transform: translateX(-50%) translateY(0); /* naik ke atas */
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   body{background-color:  rgb(18, 20, 27)}
   
  
